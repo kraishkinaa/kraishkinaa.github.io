@@ -4,10 +4,10 @@
   var R = window.RESUME;
   if (!R) return;
 
-  var SHOW_THEME_SWITCH = true; // перед публикацией поставить false
+  var SHOW_THEME_SWITCH = false; // true — вернуть плавающий переключатель тем
   var THEMES = ["template", "signal", "onyx", "onyx-steel", "onyx-bordeaux"];
   var THEME_COLORS = {
-    template: "#EBF9C1",
+    template: "#FFFEFB",
     signal: "#0A0B0D",
     onyx: "#0A0A0B",
     "onyx-steel": "#0A0B0C",
@@ -32,7 +32,7 @@
     lang: params.get("lang") === "en" ? "en" : (read(LANG_KEY) === "en" ? "en" : "ru"),
     theme: THEMES.indexOf(params.get("theme")) > -1
       ? params.get("theme")
-      : (THEMES.indexOf(read(THEME_KEY)) > -1 ? read(THEME_KEY) : "signal")
+      : (THEMES.indexOf(read(THEME_KEY)) > -1 ? read(THEME_KEY) : "template")
   };
 
   function L() { return R[state.lang]; }
@@ -65,7 +65,7 @@
   /* ---------- topic: theme ---------- */
 
   function applyTheme(theme, persist) {
-    state.theme = THEMES.indexOf(theme) > -1 ? theme : "signal";
+    state.theme = THEMES.indexOf(theme) > -1 ? theme : "template";
     document.body.classList.remove.apply(document.body.classList, THEMES.map(function (t) { return "theme-" + t; }));
     document.body.classList.add("theme-" + state.theme);
     if (state.theme.indexOf("onyx") === 0) document.body.classList.add("theme-signal");
@@ -435,7 +435,7 @@
   window.addEventListener("scroll", onScroll, { passive: true });
 
   var switchHost = $("#themeSwitch");
-  if (switchHost && !SHOW_THEME_SWITCH) switchHost.hidden = true;
+  if (switchHost) switchHost.hidden = !SHOW_THEME_SWITCH;
 
   applyTheme(state.theme, false);
   renderAll();

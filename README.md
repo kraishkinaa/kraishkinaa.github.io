@@ -10,8 +10,8 @@
 python -m http.server 8080
 ```
 
-- `http://localhost:8080/?theme=signal` — тёмная executive-tech версия (по умолчанию)
-- `http://localhost:8080/?theme=template` — версия вашего PPTX-шаблона
+- `http://localhost:8080/?theme=template` — версия вашего PPTX-шаблона (по умолчанию)
+- `http://localhost:8080/?theme=signal` — тёмная executive-tech версия
 - `http://localhost:8080/?theme=onyx` — графит + медь, спокойная тёмная версия
 - `http://localhost:8080/?theme=onyx-steel` — графит + сталь-синий
 - `http://localhost:8080/?theme=onyx-bordeaux` — графит + бордо
@@ -47,8 +47,8 @@ OG-теги и canonical уже настроены на `https://kraishkinaa.git
 
 ## Перед публикацией
 
-- Убрать плавающий переключатель вариантов: в `assets/app.js` поставить `SHOW_THEME_SWITCH = false`.
-- Выбрать тему по умолчанию: класс `theme-*` на `<body>` в `index.html` и значение по умолчанию в `app.js`.
+- Плавающий переключатель вариантов уже отключён (`SHOW_THEME_SWITCH = false`). Для сравнения тем поставьте `true`.
+- Тема по умолчанию — `template`: класс `theme-template` на `<body>` в `index.html` и значение `template` в `app.js`.
 - Проверить, что в тексте нет чувствительных кейсов и упоминаний, перечисленных в `AGENTS.md`.
 - Проверить `resume.html`: печать должна укладываться в три страницы A4.
 

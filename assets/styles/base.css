@@ -52,6 +52,7 @@ body.theme-signal { color-scheme: dark; }
 
 img { max-width: 100%; display: block; }
 svg { display: block; }
+[hidden] { display: none !important; }
 
 a { color: inherit; text-decoration: none; }
 

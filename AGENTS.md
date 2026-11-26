@@ -90,8 +90,8 @@ resume.html                 печатная версия A4, сохранени
 assets/content.js           весь контент RU/EN (единственный источник текста)
 assets/app.js              язык, темы, счётчики, табы, раскрытия
 assets/styles/base.css     каркас, сетки, типографика, адаптив
-assets/styles/theme-template.css   вариант A (шаблон)
-assets/styles/theme-signal.css     вариант B (по умолчанию, лайм)
+assets/styles/theme-template.css   вариант A (по умолчанию, шаблон)
+assets/styles/theme-signal.css     вариант B (лайм)
 assets/styles/theme-onyx.css       вариант C (Onyx, графит + медь, наследует вёрстку signal)
 assets/styles/theme-onyx-steel.css вариант D (Onyx Steel, графит + сталь-синий)
 assets/styles/theme-onyx-bordeaux.css вариант E (Onyx Bordeaux, графит + бордо)
@@ -111,10 +111,10 @@ assets/img/og-image.jpg    1200×630 для соцсетей
 ## 8. Пять вариантов оформления
 
 Переключение: `?theme=template|signal|onyx|onyx-steel|onyx-bordeaux`, класс на `<body>`, выбор в `localStorage` (`ak_theme`).
-Плавающий переключатель тем — только на период согласования; перед публикацией убрать (`SHOW_THEME_SWITCH` в `app.js`).
+Плавающий переключатель тем отключён на публичной версии (`SHOW_THEME_SWITCH = false` в `app.js`); темы остаются доступны по `?theme=`.
 
-- **template** — ваш PPTX-шаблон, адаптированный под веб: Unbounded, лайм `#9ECF38` / `#EBF9C1`, розовый `#FF8FDA` / `#FFE4F6`, крупные скругления, пастельные панели.
-- **signal** (по умолчанию) — тёмный executive-tech: фон `#0A0B0D`, лайм `#C9F24D`, стеклянные карточки, счётчики, дуотон на фото.
+- **template** (по умолчанию) — ваш PPTX-шаблон, адаптированный под веб: Unbounded, лайм `#9ECF38` / `#EBF9C1`, розовый `#FF8FDA` / `#FFE4F6`, крупные скругления, пастельные панели.
+- **signal** — тёмный executive-tech: фон `#0A0B0D`, лайм `#C9F24D`, стеклянные карточки, счётчики, дуотон на фото.
 - **onyx** — та же тёмная вёрстка Signal, но графит `#0A0A0B` + медь `#C98A5B` / `#D8B48C`, без лайма.
 - **onyx-steel** — графит `#0A0B0C` + сталь-синий `#7FA8C9` / `#A9C6DD`, CTA в глубоком синем `#24405A`.
 - **onyx-bordeaux** — графит `#0B0A0B` + бордо `#C06474` / `#D8A3AC`, CTA в глубоком винном `#3A141C`.
@@ -172,7 +172,7 @@ assets/img/og-image.jpg    1200×630 для соцсетей
 ```powershell
 # из корня проекта
 python -m http.server 8080   # или любой статический сервер
-# http://localhost:8080/?theme=signal&preview=1
+# http://localhost:8080/?theme=template&preview=1
 ```
 
 Без сервера тоже работает (двойной клик по `index.html`), но шрифты и `fetch` лучше проверять через сервер.
