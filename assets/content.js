@@ -17,7 +17,7 @@ window.RESUME = {
       name: "Андрей Краишкин",
       title: "Андрей Краишкин — HR-директор / CHRO",
       description:
-        "HR-директор с 15+ годами опыта: построение HR-функции с нуля, трудовое право и комплаенс, снижение текучести с 40% до 11%, предотвращение рисков на 41+ млн ₽."
+        "HR-директор с 15+ годами опыта: построение HR-функции с нуля, трудовое право и комплаенс, снижение текучести с 40% до 11%, предотвращение рисков на 44+ млн ₽."
     },
     ui: {
       footerRole: "HR-директор / CHRO",
@@ -66,7 +66,7 @@ window.RESUME = {
         { value: 15, suffix: "+ лет", label: "в HR и управлении" },
         { value: 500, suffix: "+", label: "сотрудников в контуре" },
         { value: 200, suffix: "+ млн ₽", label: "бюджет ФОТ под управлением" },
-        { value: 41, suffix: "+ млн ₽", label: "предотвращённых рисков" },
+        { value: 44, suffix: "+ млн ₽", label: "предотвращённых рисков" },
         { value: 11, suffix: "%", label: "текучесть — снижена с 40%" }
       ]
     },
@@ -92,9 +92,9 @@ window.RESUME = {
         },
         {
           cat: "risk",
-          metric: "41+ млн ₽",
+          metric: "44+ млн ₽",
           title: "Предотвращённые риски",
-          text: "За счёт разработки комплекта ЛНА устранены риски доначисления налогов.",
+          text: "41+ млн — КИФА (комплект ЛНА), 2,2 млн — Минпросвещения, ~1 млн — МВ Строй (оценка).",
           outcome: "Независимый аудит ПАО — без замечаний"
         },
         {
@@ -162,7 +162,7 @@ window.RESUME = {
           points: [
             "Построил HR-функцию с нуля в период активного роста; прямое подчинение генеральному директору.",
             "По задаче ГД построил HR-инфраструктуру нового направления (эксплуатация отремонтированных объектов): оргструктура, должностные инструкции, профили компетенций, найм — направление запущено в срок.",
-            "Устранил 20+ нарушений ТК РФ (риски штрафов 500+ тыс. ₽); внедрил полный пакет кадровой документации и шаблонов приказов — повторные нарушения сведены к нулю.",
+            "Устранил 20+ нарушений ТК РФ (оценка рисков ~1 млн ₽); внедрил полный пакет кадровой документации и шаблонов приказов — повторные нарушения сведены к нулю.",
             "Внедрил систему оценки рабочего персонала на объектах — руководство впервые получило объективные данные для решений по линейному персоналу.",
             "Создал систему подбора с воронкой и метриками (стоимость и скорость закрытия); лично провёл 50+ собеседований, закрыл 4 ключевые вакансии.",
             "Подготовил ТЗ на внедрение 1С:ЗУП и CRM — основа цифровизации HR-процессов."
@@ -295,7 +295,7 @@ window.RESUME = {
       name: "Andrey Kraishkin",
       title: "Andrey Kraishkin — HR Director / CHRO",
       description:
-        "HR Director with 15+ years of experience: building HR functions from scratch, employment law and compliance, reducing turnover from 40% to 11%, preventing risks worth RUB 41M+."
+        "HR Director with 15+ years of experience: building HR functions from scratch, employment law and compliance, reducing turnover from 40% to 11%, preventing risks worth RUB 44M+."
     },
     ui: {
       footerRole: "HR Director / CHRO",
@@ -344,7 +344,7 @@ window.RESUME = {
         { value: 15, suffix: "+ years", label: "in HR and management" },
         { value: 500, suffix: "+", label: "employees in scope" },
         { value: 200, suffix: "+ M RUB", label: "payroll budget managed" },
-        { value: 41, suffix: "+ M RUB", label: "risks prevented" },
+        { value: 44, suffix: "+ M RUB", label: "risks prevented" },
         { value: 11, suffix: "%", label: "turnover — down from 40%" }
       ]
     },
@@ -370,9 +370,9 @@ window.RESUME = {
         },
         {
           cat: "risk",
-          metric: "RUB 41M+",
+          metric: "RUB 44M+",
           title: "Risks prevented",
-          text: "A full set of local regulations removed tax assessment risks.",
+          text: "RUB 41M+ — KIFA (local regulations), RUB 2.2M — Ministry of Education, ~RUB 1M — MV Stroy (estimate).",
           outcome: "Independent audit of a public company — no findings"
         },
         {
@@ -440,7 +440,7 @@ window.RESUME = {
           points: [
             "Built the HR function from scratch during active growth; reported directly to the CEO.",
             "On the CEO's brief, built HR infrastructure for a new business line (operation of renovated properties): org structure, job descriptions, competency profiles, hiring — launched on time.",
-            "Removed 20+ labour code violations (RUB 500K+ fine risk); introduced the full HR documentation package and order templates — repeat violations reduced to zero.",
+            "Removed 20+ labour code violations (estimated risk ~RUB 1M); introduced the full HR documentation package and order templates — repeat violations reduced to zero.",
             "Introduced performance assessment for site workers — management gained objective data for line staff decisions for the first time.",
             "Built a recruitment funnel with metrics (cost and time to hire); personally conducted 50+ interviews and closed 4 key vacancies.",
             "Prepared the 1C:ZUP and CRM implementation brief, laying the foundation for HR digitalisation."
