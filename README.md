@@ -29,21 +29,21 @@ python -m http.server 8080
 
 ## Деплой на GitHub Pages
 
-1. Создайте публичный репозиторий **`<username>.github.io`** (вместо `<username>` — ваш логин GitHub).
+1. Создайте публичный репозиторий **`kraishkinaa.github.io`**.
 2. В папке проекта уже есть git-репозиторий и первый коммит. Осталось подключить remote:
 
 ```powershell
 cd C:\Users\Пользователь\OneDrive\Desktop\OpenCode\MyResume
-git remote add origin https://github.com/<username>/<username>.github.io.git
+git remote add origin https://github.com/kraishkinaa/kraishkinaa.github.io.git
 git push -u origin main
 ```
 
 3. GitHub → **Settings → Pages** → Source: **Deploy from a branch**, Branch: **main**, folder: **/ (root)**.
-4. Через 1–2 минуты сайт откроется по адресу `https://<username>.github.io`.
+4. Через 1–2 минуты сайт откроется по адресу `https://kraishkinaa.github.io`.
 
-Если имя `<username>.github.io` занято, назовите репозиторий `resume` — сайт будет по адресу `https://<username>.github.io/resume/`.
+Если имя `kraishkinaa.github.io` занято, назовите репозиторий `resume` — сайт будет по адресу `https://kraishkinaa.github.io/resume/`.
 
-После push сообщите username: нужно заменить `https://kraishkin.github.io/` в OG-тегах `index.html` на финальный адрес.
+OG-теги и canonical уже настроены на `https://kraishkinaa.github.io/`.
 
 ## Перед публикацией
 
