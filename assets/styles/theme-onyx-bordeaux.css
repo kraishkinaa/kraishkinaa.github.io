@@ -1,0 +1,70 @@
+/* ---------- Onyx Bordeaux: графит + бордо ---------- */
+
+body.theme-onyx-bordeaux {
+  --bg: #0b0a0b;
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-2: rgba(255, 255, 255, 0.07);
+  --ink: #f5edec;
+  --ink-soft: #d3c4c4;
+  --muted: #9a8b8e;
+  --line: rgba(255, 255, 255, 0.12);
+  --accent: #c06474;
+  --accent-ink: #0b0a0b;
+  --accent-soft: rgba(192, 100, 116, 0.14);
+  --metric: #d8a3ac;
+  --topbar-bg: rgba(11, 10, 11, 0.84);
+  background-color: #0b0a0b;
+  background-image:
+    radial-gradient(900px 520px at 78% -8%, rgba(192, 100, 116, 0.14), transparent 65%),
+    radial-gradient(700px 420px at 0% 30%, rgba(216, 163, 172, 0.06), transparent 70%);
+}
+
+body.theme-onyx-bordeaux .brand-mark { background: var(--accent); color: #0b0a0b; }
+
+body.theme-onyx-bordeaux .hero-media img { border-color: rgba(192, 100, 116, 0.4); }
+body.theme-onyx-bordeaux .photo-badge {
+  border-color: rgba(192, 100, 116, 0.48);
+  background: rgba(11, 10, 11, 0.76);
+}
+body.theme-onyx-bordeaux .photo-badge .dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(192, 100, 116, 0.18);
+}
+
+body.theme-onyx-bordeaux .eyebrow::before {
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(192, 100, 116, 0.7);
+}
+
+body.theme-onyx-bordeaux .h1-last {
+  background: linear-gradient(100deg, #f5edec 8%, #d8a3ac 58%, #c06474 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+body.theme-onyx-bordeaux .tag:hover { border-color: var(--accent); color: var(--accent); }
+body.theme-onyx-bordeaux .card:hover { border-color: rgba(192, 100, 116, 0.5); }
+
+body.theme-onyx-bordeaux .timeline::before {
+  background: linear-gradient(180deg, rgba(192, 100, 116, 0.65), rgba(192, 100, 116, 0.05));
+}
+body.theme-onyx-bordeaux .job::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(192, 100, 116, 0.13);
+}
+body.theme-onyx-bordeaux .job-points li::before { background: var(--accent); }
+
+body.theme-onyx-bordeaux .lang-list li { background: rgba(192, 100, 116, 0.12); color: var(--accent); }
+
+body.theme-onyx-bordeaux .cta { background: #3a141c; color: #f7e9e8; }
+body.theme-onyx-bordeaux .cta h2 { color: #f7e9e8; }
+body.theme-onyx-bordeaux .cta .btn-primary { background: #f7e9e8; color: #3a141c; }
+body.theme-onyx-bordeaux .cta .btn-ghost { color: #f7e9e8; border-color: rgba(247, 233, 232, 0.35); }
+body.theme-onyx-bordeaux .cta .btn-ghost:hover { background: rgba(255, 255, 255, 0.1); }
+body.theme-onyx-bordeaux .contacts-large .contact-icon { background: rgba(255, 255, 255, 0.12); }
+body.theme-onyx-bordeaux .contacts-large .contact-label { color: #f7e9e8; opacity: 0.68; }
+
+body.theme-onyx-bordeaux .theme-switch { background: #131011; }
+body.theme-onyx-bordeaux .theme-switch button[aria-pressed="true"] { background: var(--accent); color: #0b0a0b; }
+
+body.theme-onyx-bordeaux .toast { background: var(--accent); color: #0b0a0b; }

@@ -1,0 +1,12 @@
+# исходники, не предназначенные для публикации
+*.docx
+*.pptx
+*.pdf
+GH5A0720.jpg
+
+# служебное
+node_modules/
+dist/
+Thumbs.db
+desktop.ini
+.DS_Store

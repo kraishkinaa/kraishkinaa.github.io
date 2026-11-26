@@ -1,0 +1,70 @@
+/* ---------- Onyx Steel: графит + сталь-синий ---------- */
+
+body.theme-onyx-steel {
+  --bg: #0a0b0c;
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-2: rgba(255, 255, 255, 0.07);
+  --ink: #eef3f7;
+  --ink-soft: #c6d0d8;
+  --muted: #8e99a3;
+  --line: rgba(255, 255, 255, 0.12);
+  --accent: #7fa8c9;
+  --accent-ink: #0a0b0c;
+  --accent-soft: rgba(127, 168, 201, 0.14);
+  --metric: #a9c6dd;
+  --topbar-bg: rgba(10, 11, 12, 0.84);
+  background-color: #0a0b0c;
+  background-image:
+    radial-gradient(900px 520px at 78% -8%, rgba(127, 168, 201, 0.14), transparent 65%),
+    radial-gradient(700px 420px at 0% 30%, rgba(169, 198, 221, 0.06), transparent 70%);
+}
+
+body.theme-onyx-steel .brand-mark { background: var(--accent); color: #0a0b0c; }
+
+body.theme-onyx-steel .hero-media img { border-color: rgba(127, 168, 201, 0.4); }
+body.theme-onyx-steel .photo-badge {
+  border-color: rgba(127, 168, 201, 0.48);
+  background: rgba(10, 11, 12, 0.76);
+}
+body.theme-onyx-steel .photo-badge .dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(127, 168, 201, 0.18);
+}
+
+body.theme-onyx-steel .eyebrow::before {
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(127, 168, 201, 0.7);
+}
+
+body.theme-onyx-steel .h1-last {
+  background: linear-gradient(100deg, #eef3f7 8%, #a9c6dd 58%, #7fa8c9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+body.theme-onyx-steel .tag:hover { border-color: var(--accent); color: var(--accent); }
+body.theme-onyx-steel .card:hover { border-color: rgba(127, 168, 201, 0.5); }
+
+body.theme-onyx-steel .timeline::before {
+  background: linear-gradient(180deg, rgba(127, 168, 201, 0.65), rgba(127, 168, 201, 0.05));
+}
+body.theme-onyx-steel .job::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(127, 168, 201, 0.13);
+}
+body.theme-onyx-steel .job-points li::before { background: var(--accent); }
+
+body.theme-onyx-steel .lang-list li { background: rgba(127, 168, 201, 0.12); color: var(--accent); }
+
+body.theme-onyx-steel .cta { background: #24405a; color: #eef3f7; }
+body.theme-onyx-steel .cta h2 { color: #eef3f7; }
+body.theme-onyx-steel .cta .btn-primary { background: #eef3f7; color: #24405a; }
+body.theme-onyx-steel .cta .btn-ghost { color: #eef3f7; border-color: rgba(238, 243, 247, 0.35); }
+body.theme-onyx-steel .cta .btn-ghost:hover { background: rgba(255, 255, 255, 0.1); }
+body.theme-onyx-steel .contacts-large .contact-icon { background: rgba(255, 255, 255, 0.12); }
+body.theme-onyx-steel .contacts-large .contact-label { color: #eef3f7; opacity: 0.68; }
+
+body.theme-onyx-steel .theme-switch { background: #111315; }
+body.theme-onyx-steel .theme-switch button[aria-pressed="true"] { background: var(--accent); color: #0a0b0c; }
+
+body.theme-onyx-steel .toast { background: var(--accent); color: #0a0b0c; }

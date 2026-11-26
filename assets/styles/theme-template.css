@@ -1,0 +1,227 @@
+/* ---------- Template: адаптация PPTX-шаблона ---------- */
+
+body.theme-template {
+  --bg: #fffefb;
+  --surface: #ffffff;
+  --surface-2: #f4f6ec;
+  --ink: #14150f;
+  --ink-soft: #33362b;
+  --muted: #6f7266;
+  --line: rgba(20, 21, 15, 0.16);
+  --accent: #9ecf38;
+  --accent-ink: #14150f;
+  --accent-soft: #ebf9c1;
+  --metric: #c22a72;
+  --pink: #ff8fda;
+  --pink-soft: #ffe4f6;
+  --pink-ink: #b01f63;
+  --topbar-bg: rgba(255, 254, 251, 0.9);
+  --font-display: "Unbounded", "Manrope", sans-serif;
+  --display-weight: 600;
+  --display-tracking: -0.03em;
+  --display-case: uppercase;
+  --radius: 18px;
+  --radius-lg: 28px;
+  --radius-sm: 12px;
+}
+
+body.theme-template .progress span { background: var(--pink); }
+
+body.theme-template .topbar { border-bottom: 1px solid rgba(255, 143, 218, 0.35); }
+
+body.theme-template .brand-mark {
+  background: var(--accent);
+  color: var(--ink);
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+body.theme-template .hero {
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  grid-template-areas:
+    "media copy"
+    "stats stats";
+  gap: clamp(24px, 3.4vw, 52px);
+}
+
+body.theme-template .hero-media { align-self: center; }
+body.theme-template .hero-media::before {
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  background: var(--accent-soft);
+  border-radius: var(--radius-lg);
+  z-index: -1;
+}
+body.theme-template .hero-media img {
+  height: clamp(320px, 52vh, 540px);
+  border-radius: var(--radius-lg);
+  object-position: 50% 12%;
+}
+body.theme-template .photo-badge {
+  left: 14px;
+  bottom: 14px;
+  background: var(--accent);
+  color: var(--ink);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+body.theme-template .photo-badge .dot { background: var(--ink); box-shadow: none; width: 6px; height: 6px; }
+
+body.theme-template .eyebrow { color: var(--pink-ink); letter-spacing: 0.12em; }
+body.theme-template .eyebrow::before { background: var(--pink); height: 3px; width: 32px; border-radius: 2px; }
+
+body.theme-template h1 { font-size: clamp(38px, 5.2vw, 74px); font-weight: 700; line-height: 0.94; }
+body.theme-template .h1-last {
+  width: fit-content;
+  color: var(--ink);
+  background-image: linear-gradient(transparent 62%, var(--accent-soft) 62%, var(--accent-soft) 92%, transparent 92%);
+  background-repeat: no-repeat;
+}
+
+body.theme-template .hero-lead { font-size: clamp(16px, 1.3vw, 18.5px); max-width: 48ch; }
+
+body.theme-template .tags { gap: 6px; }
+body.theme-template .tag {
+  background: var(--accent);
+  color: var(--ink);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 7px 10px;
+}
+body.theme-template .tag:nth-child(even) { background: var(--accent-soft); }
+
+body.theme-template .contact-icon { background: var(--accent-soft); color: var(--ink); border-radius: 10px; }
+
+body.theme-template .hero-stats { gap: 10px; border-top: 0; padding-top: 0; }
+body.theme-template .stat {
+  padding: 18px 18px 16px;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  gap: 2px;
+}
+body.theme-template .stat:nth-child(even) { background: var(--pink-soft); }
+body.theme-template .stat-value { color: var(--ink); font-weight: 700; letter-spacing: -0.03em; }
+body.theme-template .stat:nth-child(even) .stat-value { color: var(--pink-ink); }
+body.theme-template .stat-suffix { color: var(--ink-soft); opacity: 0.9; }
+body.theme-template .stat-label { color: var(--ink-soft); opacity: 0.8; }
+
+body.theme-template .section { border-top: 1px solid rgba(20, 21, 15, 0.1); }
+body.theme-template .kicker { color: var(--pink-ink); letter-spacing: 0.12em; }
+body.theme-template .section-head h2 { font-weight: 700; }
+body.theme-template .section-head h2::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--accent);
+  margin-bottom: 14px;
+}
+
+body.theme-template .tabs { gap: 6px; }
+body.theme-template .tabs button {
+  border: 0;
+  background: var(--surface-2);
+  border-radius: 10px;
+  padding: 9px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+body.theme-template .tabs button[aria-selected="true"] { background: var(--ink); color: var(--accent); }
+
+body.theme-template .cards { gap: 12px; }
+body.theme-template .card {
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  padding: clamp(20px, 2.2vw, 28px);
+}
+body.theme-template .card:nth-child(3n+2) { background: var(--pink-soft); }
+body.theme-template .card:nth-child(3n) { background: #f3f5ec; }
+body.theme-template .card-metric { color: var(--ink); font-weight: 700; }
+body.theme-template .card:nth-child(3n+2) .card-metric { color: var(--pink-ink); }
+body.theme-template .card-title { text-transform: uppercase; font-size: 13px; letter-spacing: 0.05em; }
+body.theme-template .card-text { color: var(--ink-soft); opacity: 0.8; }
+body.theme-template .card-outcome { border-top-color: rgba(20, 21, 15, 0.14); }
+body.theme-template .card-outcome .icon { color: var(--pink-ink); }
+
+body.theme-template .job-period { color: var(--pink-ink); font-weight: 700; }
+body.theme-template .job-company {
+  color: var(--ink);
+  background: var(--accent);
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+body.theme-template .job-role { font-weight: 700; }
+body.theme-template .job-points li::before { background: var(--pink); }
+body.theme-template .job-more summary { color: var(--pink-ink); }
+
+body.theme-template .skills-grid { gap: clamp(24px, 3vw, 48px); }
+body.theme-template .skill-groups {
+  padding: clamp(20px, 2.6vw, 32px);
+  background: var(--accent-soft);
+  border-radius: var(--radius-lg);
+  gap: 22px;
+}
+body.theme-template .skill-group h3 { font-family: var(--font-display); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+body.theme-template .chips li { background: #fffefb; border-color: rgba(20, 21, 15, 0.1); border-radius: 8px; font-size: 11.5px; }
+body.theme-template .cred-block h3 { color: var(--pink-ink); }
+body.theme-template .lang-list li { border-radius: 8px; background: var(--pink-soft); color: var(--pink-ink); }
+
+body.theme-template .cta { background: var(--accent-soft); color: var(--ink); }
+body.theme-template .cta h2 { font-weight: 700; }
+body.theme-template .cta p { opacity: 0.75; }
+body.theme-template .cta .btn-primary { background: var(--ink); color: var(--accent); }
+body.theme-template .cta .btn-ghost { color: var(--ink); border-color: rgba(20, 21, 15, 0.28); }
+body.theme-template .cta .contact-icon { background: rgba(20, 21, 15, 0.06); }
+body.theme-template .contacts-large .copy:hover { background: rgba(20, 21, 15, 0.1); }
+
+body.theme-template .link-btn,
+body.theme-template .panel summary:hover .panel-title,
+body.theme-template .job-details > summary:hover .job-role { color: var(--pink-ink); }
+
+body.theme-template .theme-switch { border-radius: 12px; background: var(--surface); }
+body.theme-template .theme-switch button { border-radius: 8px; }
+
+@media (max-width: 760px) {
+  body.theme-template .hero { grid-template-columns: 1fr; grid-template-areas: "copy" "media" "stats"; }
+  body.theme-template .hero-media { max-width: 100%; }
+  body.theme-template .hero-media::before { inset: 10px -10px -10px 10px; }
+  body.theme-template .hero-media img { height: clamp(290px, 44vh, 400px); }
+  body.theme-template .job { grid-template-columns: 1fr; gap: 6px; }
+  body.theme-template .job-period { padding-top: 0; }
+  body.theme-template .hero-stats { grid-template-columns: 1fr 1fr; }
+  body.theme-template .stat { padding: 14px; }
+  body.theme-template .section-head h2::before { width: 34px; height: 6px; }
+}
+
+/* сайдбар компетенций */
+body.theme-template .side-skills .skill-groups { padding: 18px; border-radius: var(--radius); }
+body.theme-template .side-skills h2 { font-size: clamp(20px, 1.8vw, 24px); }
+body.theme-template .side-skills .credentials { margin-top: 20px; }
+
+@media (max-width: 760px) {
+  body.theme-template .side-skills { border-top: 1px solid rgba(20, 21, 15, 0.1); padding-top: 26px; }
+}
+/* полноширинные плашки компетенций */
+body.theme-template .panel-title {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+body.theme-template .panel .skill-groups {
+  padding: 20px;
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+}

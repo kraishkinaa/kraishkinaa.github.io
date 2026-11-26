@@ -1,0 +1,67 @@
+/* ---------- Onyx: тёмная база Signal, графит + медь ---------- */
+
+body.theme-onyx {
+  --bg: #0a0a0b;
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-2: rgba(255, 255, 255, 0.07);
+  --ink: #f3efe8;
+  --ink-soft: #cbc5bb;
+  --muted: #948e84;
+  --line: rgba(255, 255, 255, 0.12);
+  --accent: #c98a5b;
+  --accent-ink: #0a0a0b;
+  --accent-soft: rgba(201, 138, 91, 0.14);
+  --metric: #d8b48c;
+  --topbar-bg: rgba(10, 10, 11, 0.84);
+  background-color: #0a0a0b;
+  background-image:
+    radial-gradient(900px 520px at 78% -8%, rgba(201, 138, 91, 0.13), transparent 65%),
+    radial-gradient(700px 420px at 0% 30%, rgba(216, 180, 140, 0.06), transparent 70%);
+}
+
+body.theme-onyx .brand-mark { background: var(--accent); color: #0a0a0b; }
+
+body.theme-onyx .hero-media img { border-color: rgba(201, 138, 91, 0.38); }
+body.theme-onyx .photo-badge {
+  border-color: rgba(201, 138, 91, 0.45);
+  background: rgba(10, 10, 11, 0.76);
+}
+body.theme-onyx .photo-badge .dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(201, 138, 91, 0.18);
+}
+
+body.theme-onyx .eyebrow::before {
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(201, 138, 91, 0.7);
+}
+
+body.theme-onyx .h1-last {
+  background: linear-gradient(100deg, #f3efe8 8%, #d8b48c 58%, #c98a5b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+body.theme-onyx .tag:hover { border-color: var(--accent); color: var(--accent); }
+
+body.theme-onyx .card:hover { border-color: rgba(201, 138, 91, 0.5); }
+
+body.theme-onyx .timeline::before {
+  background: linear-gradient(180deg, rgba(201, 138, 91, 0.65), rgba(201, 138, 91, 0.05));
+}
+body.theme-onyx .job::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(201, 138, 91, 0.13);
+}
+body.theme-onyx .job-points li::before { background: var(--accent); }
+
+body.theme-onyx .lang-list li { background: rgba(201, 138, 91, 0.12); color: var(--accent); }
+
+body.theme-onyx .cta .btn-primary { background: #0a0a0b; color: var(--accent); }
+body.theme-onyx .cta .contacts-large .contact-icon { background: rgba(10, 10, 11, 0.1); }
+body.theme-onyx .contacts-large .contact-label { color: #0a0a0b; opacity: 0.72; }
+
+body.theme-onyx .theme-switch { background: #111214; }
+body.theme-onyx .theme-switch button[aria-pressed="true"] { background: var(--accent); color: #0a0a0b; }
+
+body.theme-onyx .toast { background: var(--accent); color: #0a0a0b; }

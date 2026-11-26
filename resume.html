@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Андрей Краишкин — резюме</title>
+<meta name="description" content="Резюме Андрея Краишкина, HR-директора: опыт, результаты, компетенции.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/styles/resume.css">
+</head>
+<body>
+
+<div class="toolbar">
+  <a href="index.html">← На сайт</a>
+  <button type="button" class="primary" id="printBtn">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8V4h10v4M7 18H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2M7 14h10v6H7z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+    Сохранить PDF
+  </button>
+</div>
+
+<main class="sheet" id="sheet"></main>
+
+<script src="assets/content.js"></script>
+<script>
+(function () {
+  "use strict";
+  var R = window.RESUME;
+  var params = new URLSearchParams(location.search);
+  var lang = params.get("lang") === "en" ? "en" : "ru";
+  var L = R[lang];
+
+  function esc(v) {
+    return String(v).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  var jobs = L.experience.jobs.map(function (job) {
+    return '<article class="r-job">' +
+      '<p class="period">' + esc(job.period) + "</p>" +
+      "<div>" +
+        "<h3>" + esc(job.role) + "</h3>" +
+        '<p class="company">' + esc(job.company) + "</p>" +
+        '<p class="note">' + esc(job.note) + "</p>" +
+        '<p class="metrics">' + esc(job.lead) + "</p>" +
+        "<ul>" + job.points.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul>" +
+      "</div>" +
+    "</article>";
+  }).join("");
+
+  var cards = L.results.cards.map(function (c) {
+    return '<div class="r-card">' +
+      "<b>" + esc(c.metric) + "</b>" +
+      "<strong>" + esc(c.title) + "</strong>" +
+      "<p>" + esc(c.outcome) + "</p>" +
+      (c.note ? '<p class="r-note">' + esc(c.note) + "</p>" : "") +
+    "</div>";
+  }).join("");
+
+  var metrics = L.hero.stats.map(function (s) {
+    return "<div><strong>" + esc(s.value).replace(".", ",") + " " + esc(s.suffix) + "</strong><small>" + esc(s.label) + "</small></div>";
+  }).join("");
+
+  var skills = L.skills.groups.map(function (g) {
+    return '<div class="r-skill"><h3>' + esc(g.title) + "</h3><ul class=\"r-chips\">" +
+      g.items.map(function (i) { return "<li>" + esc(i) + "</li>"; }).join("") + "</ul></div>";
+  }).join("");
+
+  var edu = L.skills.education.map(function (e) {
+    return '<div class="r-edu"><b>' + esc(e.year) + "</b><p>" + esc(e.title) + "</p><small>" + esc(e.place) + "</small></div>";
+  }).join("");
+
+  var courses = L.skills.courses.map(function (c) { return "<li>" + esc(c) + "</li>"; }).join("");
+  var langs = L.skills.languages.map(function (l) { return "<li>" + esc(l) + "</li>"; }).join("");
+  var eduTitle = lang === "ru" ? "Образование и квалификация" : "Education and qualifications";
+
+  document.documentElement.lang = lang;
+  document.title = lang === "ru" ? "Андрей Краишкин — резюме" : "Andrey Kraishkin — resume";
+  var backLink = document.querySelector(".toolbar a");
+  if (backLink) backLink.textContent = lang === "ru" ? "← На сайт" : "← Back to site";
+  var printLabel = document.getElementById("printBtn");
+  if (printLabel) printLabel.lastChild.nodeValue = lang === "ru" ? " Сохранить PDF" : " Save PDF";
+
+  document.getElementById("sheet").innerHTML =
+    '<header class="r-head">' +
+      "<div>" +
+        '<p class="r-role">' + esc(L.hero.roleShort) + "</p>" +
+        "<h1>" + esc(L.hero.firstName) + " " + esc(L.hero.lastName) + "</h1>" +
+        '<p class="r-lead">' + esc(L.hero.lead) + "</p>" +
+      "</div>" +
+      '<img src="' + esc(R.meta.photo) + '" alt="' + esc(L.meta.name) + '">' +
+      '<ul class="r-contacts">' +
+        "<li><span>E-mail</span> " + esc(R.meta.email) + "</li>" +
+        "<li><span>Telegram</span> " + esc(R.meta.telegram) + "</li>" +
+        "<li><span>" + (lang === "ru" ? "Телефон" : "Phone") + "</span> " + esc(R.meta.phone) + "</li>" +
+        "<li><span>" + (lang === "ru" ? "Город" : "Location") + "</span> " + esc(R.meta.city) + "</li>" +
+      "</ul>" +
+    "</header>" +
+    '<section class="r-metrics">' + metrics + "</section>" +
+    '<section class="r-section"><h2>' + esc(L.about.title) + '</h2><p class="r-about-text">' + esc(L.about.text) + "</p></section>" +
+    '<section class="r-section"><h2>' + esc(L.results.title) + "</h2><div class=\"r-cards\">" + cards + "</div></section>" +
+    '<section class="r-section"><h2>' + esc(L.experience.title) + "</h2>" + jobs + "</section>" +
+    '<section class="r-section"><h2>' + esc(L.skills.title) + '</h2><div class="r-skill-groups">' + skills + "</div></section>" +
+    '<section class="r-section"><h2>' + esc(eduTitle) + '</h2><div class="r-creds-grid">' +
+      "<div><h3>" + esc(L.skills.educationTitle) + "</h3>" + edu + "</div>" +
+      "<div><h3>" + esc(L.skills.coursesTitle) + '</h3><ul class="r-list">' + courses + "</ul></div>" +
+      "<div><h3>" + esc(L.skills.languagesTitle) + '</h3><ul class="r-langs">' + langs + "</ul></div>" +
+    "</div></section>" +
+    '<footer class="r-foot"><span>' + esc(L.footer.recommendations) + "</span><span>kraishkin.github.io</span></footer>";
+
+  document.getElementById("printBtn").addEventListener("click", function () { window.print(); });
+  if (params.get("print") === "1") window.addEventListener("load", function () { setTimeout(function () { window.print(); }, 400); });
+})();
+</script>
+</body>
+</html>
