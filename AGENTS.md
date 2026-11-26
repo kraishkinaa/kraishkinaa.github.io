@@ -148,11 +148,12 @@ assets/img/og-image.jpg    1200×630 для соцсетей
 
 ## 12. Деплой
 
-- Репозиторий `kraishkin.github.io` (ветка `main`, корень). Сайт: `https://kraishkin.github.io`.
-- Если имя занято — `kraishkin-resume`, Pages из `main`, папка `/root`, ссылка `https://<user>.github.io/kraishkin-resume/`.
+- Репозиторий `<username>.github.io` (ветка `main`, корень). Сайт: `https://<username>.github.io`.
+- Если имя занято — репозиторий `resume`, Pages из `main`, папка `/root`, ссылка `https://<username>.github.io/resume/`.
 - Все пути относительные (`assets/...`), без ведущего `/`.
+- После выбора username заменить `https://kraishkin.github.io/` в `og:url` и `og:image` на финальный адрес.
 - Свой домен — позже, через `CNAME`.
-- В репозиторий не коммитить: исходные docx/pdf, временные файлы, `node_modules`.
+- В репозиторий не коммитить: исходные docx/pdf/pptx, `GH5A0720.jpg`, временные файлы, `node_modules`.
 
 ## 13. Чек-лист перед публикацией
 
