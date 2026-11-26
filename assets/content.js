@@ -94,8 +94,8 @@ window.RESUME = {
           cat: "risk",
           metric: "44+ млн ₽",
           title: "Предотвращённые риски",
-          text: "41+ млн — КИФА (комплект ЛНА), 2,2 млн — Минпросвещения, ~1 млн — МВ Строй (оценка).",
-          outcome: "Независимый аудит ПАО — без замечаний"
+          text: "2 проверки Контрольно-счётной палаты Московской области, внешний аудит ПАО и внутренний аудит.",
+          outcome: "Все пройдены без замечаний"
         },
         {
           cat: "risk",
@@ -372,8 +372,8 @@ window.RESUME = {
           cat: "risk",
           metric: "RUB 44M+",
           title: "Risks prevented",
-          text: "RUB 41M+ — KIFA (local regulations), RUB 2.2M — Ministry of Education, ~RUB 1M — MV Stroy (estimate).",
-          outcome: "Independent audit of a public company — no findings"
+          text: "2 audits by the Moscow Region Chamber of Control, an external audit of the public company and an internal audit.",
+          outcome: "All passed with no findings"
         },
         {
           cat: "risk",
