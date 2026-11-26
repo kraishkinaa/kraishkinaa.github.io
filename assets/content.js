@@ -271,7 +271,7 @@ window.RESUME = {
         "GeekBrains — Fullstack-разработка, 2025"
       ],
       languagesTitle: "Языки",
-      languages: ["Русский — родной", "Английский — B1"]
+      languages: ["Русский — родной", "Английский — B2"]
     },
     about: {
       title: "О себе",
@@ -549,7 +549,7 @@ window.RESUME = {
         "GeekBrains — Fullstack development, 2025"
       ],
       languagesTitle: "Languages",
-      languages: ["Russian — native", "English — B1"]
+      languages: ["Russian — native", "English — B2"]
     },
     about: {
       title: "About me",
